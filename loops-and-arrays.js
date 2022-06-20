@@ -12,7 +12,13 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(names) geeft: ["Henkje", "Pietje", "Fredje", "Joopje"]
 
+console.log(names);
 
+for (let i = 0; i < names.length; i++) {
+    names[i] = names[i] +"je";
+}
+
+console.log(names);
 
 
 // ==========================================
@@ -29,7 +35,19 @@ const numbers = [2, 4, 5, 29, 38];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(numbers) geeft: [ 4, 8, 15, 87, 76 ];
 
+console.log(numbers);
 
+for (let i = 0; i < numbers.length; i++) {
+    if (i %2 === 0) {
+        numbers[i] = numbers[i] * 2;
+    }
+    if (i %2 !== 0) {
+        numbers[i] = numbers[i] *3;
+    }
+
+}
+
+console.log(numbers);
 
 
 // ==========================================
@@ -52,4 +70,13 @@ const squares = [30, 2, 8, 24, 11];
 //   'Het volume van 8 is 512',
 //   'Het volume van 24 is 13824',
 //   'Het volume van 11 is 1331'
-// ]
+//
+
+console.log(squares);
+for (let i = 0; i < squares.length; i++) {
+    const volume = squares[i] * squares[i] * squares[i];
+
+    squares[i] = "het volume van " + squares[i] + "is" + volume;
+}
+
+console.log(squares)
